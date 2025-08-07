@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "npm run build && gh-pages -d dist --repo https://github.com/Andre1352/My-shop2.git"  },
+    "deploy1": "npm run build && gh-pages -d dist",
+    "deploy": "npm run build && gh-pages -d dist -f"  },
+  
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13"
