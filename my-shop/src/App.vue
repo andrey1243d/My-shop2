@@ -1,22 +1,14 @@
 <template>
   <div id="app">
-    <productCard
-    name="Apple"
-    description="This is Apple"
-    price="1500"
-    image="https://www.harrisfarm.com.au/cdn/shop/products/40715-done.jpg?v=1623908361&width=1920"
-    />
+    <ProductList />
   </div>
 </template>
-
 <script>
-import ProductCard from './components/ProductCard.vue';
-
+import ProductList from './components/ProductList.vue';
 export default {
   name: 'App',
   components: {
-    ProductCard
+    ProductList
   }
 }
 </script>
- 
