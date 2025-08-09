@@ -2,21 +2,22 @@
   <div id="app">
     <div class="container">
       <div class="row">
-          <ProductList />
+          <!-- <ProductList /> -->
       </div>
-      <ReviewsComponent />
+      <!-- <ReviewsComponent /> -->
     </div>
+    <router-view></router-view>
     <FooterComponent />
   </div>
 </template>
 <script>
-import ProductList from './components/ProductList.vue';
-import ReviewsComponent from './components/ReviewsComponent.vue';
+// import ProductList from './components/ProductList.vue';
+// import ReviewsComponent from './components/ReviewsComponent.vue';
 export default {
   name: 'App',
   components: {
-    ProductList,
-    ReviewsComponent
+    // ProductList,
+    // ReviewsComponent
   }
 }
 </script>
