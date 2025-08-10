@@ -12,16 +12,29 @@
 </template>
 
 <script>
+// import ProductCard from './ProductCard.vue';
+// import '@/js/script.js';
+// import {products} from '@/js/script.js';
+// export default {
+//     components: {
+//         ProductCard,
+// },
+// data() {
+//     return {
+//         products
+//     }
+//   }
+// }
 import ProductCard from './ProductCard.vue';
-import '@/js/script.js';
-import {products} from '@/js/script.js';
+
 export default {
-    components: {
-        ProductCard,
-},
-data() {
-    return {
-        products
+  components: {
+    ProductCard,
+  },
+  props: {
+    products: {
+      type: Array,
+      required: true
     }
   }
 }
