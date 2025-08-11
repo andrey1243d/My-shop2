@@ -66,13 +66,17 @@ main {
 </style>
  -->
 
- <template>
+<template>
   <div>
     <nav>
-      <router-link to="/admin/products">Home</router-link>
-      <router-link to="/admin/reviews">Comments</router-link>
-      <router-link to="/login">My profile</router-link>
-
+      <div class="menu">
+        <router-link to="/admin/products">Home</router-link>
+        <router-link to="/admin/reviews">Comments</router-link>
+        <router-link to="/login">My profile</router-link>
+      </div>
+      <div>
+        <img class="logoFoto" src="@/assets/logo.png" alt="logo" />
+      </div>
     </nav>
 
     <main>
@@ -81,6 +85,7 @@ main {
   </div>
 </template>
 
+
 <script>
 export default {
   name: "AdminDashboard",
@@ -88,41 +93,75 @@ export default {
 </script>
 
 <style scoped>
-div {
-  font-family: Arial, sans-serif;
-  background-color: #f7f9fc;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 nav {
-  background-color: #2c3e50;
-  padding: 1rem;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1abc9c, #16a085);
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
 nav a {
-  color: #ecf0f1;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
+  font-weight: 500;
+  margin-right: 1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:last-child {
+  margin-right: 0;
 }
 
 nav a:hover {
-  background-color: #34495e;
+  color: #f1c40f;
+  transform: translateY(-2px);
 }
 
-.router-link-exact-active {
-  background-color: #1abc9c;
-  color: white;
+nav a.router-link-active {
+  border-bottom: 2px solid #f1c40f;
 }
 
-main {
-  flex: 1;
-  padding: 2rem;
+.logoFoto {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.logoFoto:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+/* Ліва частина меню (посилання) */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+
+  nav a {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+  }
+
+  .logoFoto {
+    margin-top: 0.5rem;
+  }
 }
 </style>

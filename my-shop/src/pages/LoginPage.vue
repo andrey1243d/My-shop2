@@ -57,56 +57,108 @@ export default {
 
 <style scoped>
 .login-form {
-    max-width: 350px;
-    margin: 80px auto;
-    padding: 25px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: Arial, sans-serif;
+  max-width: 380px;
+  margin: 60px auto;
+  padding: 30px 35px;
+  background: #fefefe;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.15);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+.login-form:hover {
+  box-shadow: 0 15px 40px rgba(0, 123, 255, 0.25);
 }
 
 h2 {
-    margin-bottom: 20px;
-    color: #333;
+  margin-bottom: 28px;
+  color: #222;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
 }
 
 input {
-    width: 100%;
-    padding: 10px 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 15px;
-    transition: border 0.2s;
+  width: 100%;
+  padding: 14px 18px;
+  margin: 12px 0;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  background-color: #fafafa;
+  transition: border-color 0.3s, background-color 0.3s;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  color: #bbb;
+  font-weight: 400;
 }
 
 input:focus {
-    border-color: #007bff;
-    outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
 }
 
 .error {
-    color: #ff4d4d;
-    font-size: 14px;
-    margin: 10px 0;
+  color: #e74c3c;
+  font-size: 14px;
+  margin: 10px 0 16px;
+  font-weight: 600;
+  text-align: left;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background: #007bff;
-    border: none;
-    border-radius: 6px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.2s;
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(135deg, #0069d9 0%, #004a9f 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.15s ease;
+  user-select: none;
+  box-shadow: 0 5px 15px rgba(0, 105, 217, 0.4);
 }
 
 button:hover {
-    background: #0056b3;
+  background: linear-gradient(135deg, #004a9f 0%, #002f6c 100%);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(0, 105, 217, 0.6);
+}
+
+/* Адаптивність */
+@media (max-width: 480px) {
+  .login-form {
+    margin: 40px 15px;
+    padding: 25px 20px;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 12px 0;
+    font-size: 1rem;
+  }
 }
 </style>
-
