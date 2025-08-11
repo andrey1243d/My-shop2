@@ -9,7 +9,7 @@
                 <button @click="removeItem(index)">Delete</button>
             </li>
         </ul>
-        <p v-if="csrtItems > 0">загальна сума {{ totalPrice }}грн</p>
+        <p v-if="cartItems.length > 0">загальна сума {{ totalPrice }}грн</p>
     </div>
 </template>
 

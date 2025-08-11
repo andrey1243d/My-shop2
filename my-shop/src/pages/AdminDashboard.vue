@@ -71,6 +71,8 @@ main {
     <nav>
       <router-link to="/admin/products">Home</router-link>
       <router-link to="/admin/reviews">Comments</router-link>
+      <router-link to="/login">My profile</router-link>
+
     </nav>
 
     <main>
