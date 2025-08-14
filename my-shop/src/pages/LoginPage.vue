@@ -41,6 +41,11 @@ export default {
         };
     },
     async mounted() {
+      const savedUser = localStorage.getItem("authUser");
+    if (savedUser) {
+        this.$router.push("/profile");
+        return; 
+    }
         try {
             const response = await fetch("/admin.json");
             if (!response.ok) {
@@ -51,7 +56,8 @@ export default {
             console.error("Помилка завантаження JSON: " + error);
             this.message = "Помилка сервера! Спробуйте пізніше.";
         }
-    }
+        
+    },
 };
 </script>
 
