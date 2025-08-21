@@ -1,9 +1,4 @@
 <template>
-    <!-- <div class="admin-panel">
-        <h2>Admin Panel</h2>
-        <p class="welcome">Welcome, <span>{{ username }}</span></p>
-        <button @click="logout" class="logout-btn">Logout</button>
-    </div> -->
     <div class="admin-panel">
     <h2>Admin Panel</h2>
     <p class="welcome">Welcome, <span>{{ username }}</span></p>

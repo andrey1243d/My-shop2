@@ -13,13 +13,11 @@
 export default {
     methods: {
         login: function () {
-            // виправлена перевірка — якщо хоч одне поле пусте, зупиняємось
             if (this.username === "" || this.password === "") {
                 this.message = "Введіть логін і пароль";
                 return;
             }
 
-            // пошук користувача з this, залишаючи .bind(this)
             const user = this.users.find(function (u) {
                 return u.username === this.username && u.password === this.password;
             }.bind(this));
