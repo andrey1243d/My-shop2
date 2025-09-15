@@ -94,7 +94,7 @@ export default {
             font-size: 2.5rem;
             margin-bottom: 15px;
             background: linear-gradient(to right, #fdbb2d, #b21f1f);
-            -webkit-background-clip: text;
+            /* -webkit-background-clip: text; */
             -webkit-text-fill-color: transparent;
             text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }

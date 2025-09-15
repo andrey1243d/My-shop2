@@ -9,10 +9,10 @@ import RoomPage from '@/pages/RoomPage.vue';
 const routes = [
 {
 path: '/',
-component: AdminDashboard, // Використовуємо AdminDashboard як головний компонент
+component: AdminDashboard,
 children: [
-{ path: '', component: ManageProducts }, // Домашня сторінка рендерить ManageProducts
-{ path: 'reviews', component: ManageReviews }, // Відгуки
+{ path: '', component: ManageProducts }, 
+{ path: 'reviews', component: ManageReviews }, 
 { path: 'login', component: LoginPage},
 { path: 'profile', component: ProfilePage}
 ],

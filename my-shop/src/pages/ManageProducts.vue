@@ -4,22 +4,19 @@
   <div class="search-container">
     <h2>Пошук товару</h2>
 
-    <!-- Пошук -->
     <input
       type="text"
       v-model="searchQuery"
       placeholder="Введіть назву товару"
     />
 
-    <!-- Кнопка корзини -->
+  
     <button @click="toggleCart" class="cart-toggle-btn">
       🛒 ({{ cartItems.length }})
     </button>
 
-    <!-- Список товарів -->
     <ProductList :products="filteredProducts" />
 
-    <!-- Виїзна корзина -->
     <div class="cart-sidebar" :class="{ open: isCartOpen }">
       <div class="cart-header">
         <h3>🛒 Ваш кошик</h3>
